@@ -12,14 +12,14 @@ def extract_index_nparray(nparray):
     return index
 
 
-img = cv2.imread("/home/falcon/Documents/Python practice/College Project/Face-Swap/23.jpeg")
+img = cv2.imread("/home/falcon/Documents/Python practice/College Project/Face-Swap/Local FaceSwap/face_images/23.jpeg")
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 mask = np.zeros_like(img_gray)
 
 cap = cv2.VideoCapture(0)
 
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor("/home/falcon/Documents/Python practice/College Project/Face-Swap/app/static/dat/shape_predictor_68_face_landmarks.dat")
+predictor = dlib.shape_predictor("/home/falcon/Documents/Python practice/College Project/shape_predictor_68_face_landmarks.dat")
 
 indexes_triangles = []
 
